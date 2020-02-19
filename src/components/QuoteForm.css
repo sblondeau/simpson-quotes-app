@@ -1,0 +1,26 @@
+.QuoteForm {
+    width: 450px;
+    font-size: 1.2em;
+    padding-left: calc(40px + 1em);
+    margin-top: 1rem;
+  }
+
+  .QuoteForm input {
+    --border-color:#ddd;
+    margin-bottom: 1em;
+    width: 90%;
+    padding: 0.25rem;
+    border: 1px solid var(--border-color);
+  }
+  
+
+  .QuoteForm input.length-ok {
+    --border-color: #9ae6b4;
+  }
+  
+  .QuoteForm input.length-max-reached {
+    --border-color: #fc8181;
+  }
+
+  
+  
