@@ -8,9 +8,11 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {quotes : []};
+    this.state = {quotes : null};
     this.handleClick = this.handleClick.bind(this);
-    // first display
+  }
+
+  componentDidMount() {
     this.handleClick();
   }
 
@@ -26,7 +28,7 @@ class App extends React.Component {
         <Navbar />
         <button className="btn" onClick={this.handleClick}>Get Quote</button>
         <QuoteForm />
-        <QuoteList simpsonQuotes={this.state.quotes} />  
+        { this.state.quotes ? <QuoteList simpsonQuotes={this.state.quotes} /> : 'Waiting for a donut'}
       </div>
     );
   }
